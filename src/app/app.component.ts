@@ -14,13 +14,18 @@ export class AppComponent {
     {
       title: 'Home',
       url: '/home',
-      icon: 'home'
+      icon: 'home',
+      subtitle: 'Página Principal',
+      color:'tertiary'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+      title: 'chat',
+      url: '/chat/generico',
+      icon: 'chatboxes',
+      subtitle: 'Romm para Chatear',
+      color:'warning'
+    },
+   
   ];
 
   constructor(

@@ -2,21 +2,24 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
+        <ion-toolbar color="secondary">
+          <ion-title>Menu super chat</ion-title>
+          <ion-menu-toggle slot="end"><ion-icon name="close-circle"></ion-icon></ion-menu-toggle>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-content color="success">
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" [color]=" p.color ">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
                 {{p.title}}
               </ion-label>
+              <span class="subtitulo-menu">{{p.subtitle}}</span>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+        <div id="version" class="ion-text-center ion-text-botton ">Versión 1.0</div>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
